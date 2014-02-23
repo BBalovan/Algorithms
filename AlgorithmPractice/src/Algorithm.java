@@ -11,15 +11,20 @@ public class Algorithm {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Integer[] testArray = { 14, 57, 84, 22, 22, 1, 3, 44, 77, 98, 10, 13,
+		Integer[] testArray = { 14, 57, 84, 22, 22, 1, 3, 44, 77, 98, 10, 13,36,72,128,888,666,
 				43 };
+		String normalString = "megszentségteleníthetetlenségeskedéseitekért";
+		
+		hattalossz(Arrays.asList(testArray));
+		
+		reverseString(normalString);
 		// call here
 
-		List<Integer> testOrder = customSort(Arrays.asList(testArray));
+		customSort(Arrays.asList(testArray));
 
-		int met = getMaxValue(-11, Arrays.asList(testArray));
+		getMaxValue(-11, Arrays.asList(testArray));
 
-		boolean ertek = primSzam(81);
+		primSzam(81);
 		Arrays.asList(testArray);
 
 		getEvenNumbers(Arrays.asList(testArray));
@@ -65,6 +70,29 @@ public class Algorithm {
 			localUnsortedList.remove(localUnsortedList.indexOf((currentMax)));
 		}
 		return orderedList;
+	}
+	
+	public static String reverseString(String normalString) {
+		
+		int lenght = normalString.length();
+		String reverse = "";
+		
+		for (int i = lenght - 1; i >= 0; i--)
+			reverse = reverse + normalString.charAt(i);
+		
+		return reverse;
+	}
+	
+	public static List<Integer> hattalossz(List<Integer>unsortedList) {
+		List<Integer> localUnsortedList = new ArrayList<Integer>(unsortedList);
+		List<Integer> sixList = new ArrayList<Integer>();
+		
+		for (int item : localUnsortedList) {
+			if (item%2==0 && item%3 == 0)
+				sixList.add(item);
+		}
+		return sixList;
+		
 	}
 
 }
