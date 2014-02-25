@@ -11,18 +11,21 @@ public class Algorithm {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Integer[] testArray = { 14, 57, 84, 22, 22, 1, 3, 44, 77, 98, 10, 13,36,72,128,888,666,
-				43 };
+		Integer[] testArray = { 14, 57, 84, 22, 22, 1, 3, 44, 77, 98, 10, 13,36,72,128,888,666, 43 };
+		String[] stringArray1 = { "alma", "körte", "ananász","barack", "mangó" };
+		String[] stringArray2 = {"alma","ananász","eper","mandarin","narancs" };
+		String[] stringArray3 = {"ananász","alma","eper","mandarin","mangó"};
 		String normalString = "megszentségteleníthetetlenségeskedéseitekért";
+		
+		showCommonFruit(Arrays.asList(stringArray1), Arrays.asList(stringArray2), Arrays.asList(stringArray3));
 		
 		hattalossz(Arrays.asList(testArray));
 		
 		reverseString(normalString);
-		// call here
 
 		customSort(Arrays.asList(testArray));
 
-		getMaxValue(-11, Arrays.asList(testArray));
+		getMaxValue(0, Arrays.asList(testArray));
 
 		primSzam(81);
 		Arrays.asList(testArray);
@@ -94,5 +97,22 @@ public class Algorithm {
 		return sixList;
 		
 	}
+	public static List<String> showCommonFruit(List<String>fruitList1, List<String>fruitList2, List<String>fruitList3) {
+		List<String>localFruitList1 = new ArrayList<String>(fruitList1);
+		List<String>localFruitList2 = new ArrayList<String>(fruitList2);
+		List<String>localFruitList3 = new ArrayList<String>(fruitList3);
+		List<String>finalList = new ArrayList<String>();
+		
+		for (String item : localFruitList1){
+			for (String item2 : localFruitList2) {
+				for (String item3 : localFruitList3) {
+					if (item.equals(item3) && item.equals(item2)) {
+						finalList.add(item);
+					}
+				}
+			}
+		}
 
+		return finalList;
+	}
 }
