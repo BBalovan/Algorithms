@@ -14,10 +14,10 @@ public class Algorithm {
 		Integer[] testArray = { 14, 57, 84, 22, 22, 1, 3, 44, 77, 98, 10, 13,36,72,128,888,666, 43 };
 		String[] stringArray1 = { "alma", "k�rte", "anan�sz","barack", "mang�" };
 		String[] stringArray2 = {"alma","anan�sz","eper","mandarin","narancs" };
-		String[] stringArray3 = {"anan�sz","alma","eper","mandarin","mang�"};
+		String[] stringArray3 = {"anan�sz","vadalma","eper","mandarin","mang�"};
 		String normalString = "megszents�gtelen�thetetlens�gesked�seitek�rt";
 		
-		showCommonFruit(Arrays.asList(stringArray1), Arrays.asList(stringArray2), Arrays.asList(stringArray3));
+		List<String> commons = showCommonFruit(Arrays.asList(stringArray1), Arrays.asList(stringArray2), Arrays.asList(stringArray3));
 		//try from ubuntu
 		hattalossz(Arrays.asList(testArray));
 		
