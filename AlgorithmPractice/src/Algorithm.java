@@ -18,7 +18,7 @@ public class Algorithm {
 		String normalString = "megszents�gtelen�thetetlens�gesked�seitek�rt";
 		
 		showCommonFruit(Arrays.asList(stringArray1), Arrays.asList(stringArray2), Arrays.asList(stringArray3));
-		//asdasdasdasd
+		//try from ubuntu
 		hattalossz(Arrays.asList(testArray));
 		
 		reverseString(normalString);
