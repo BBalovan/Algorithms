@@ -12,13 +12,13 @@ public class Algorithm {
 	 */
 	public static void main(String[] args) {
 		Integer[] testArray = { 14, 57, 84, 22, 22, 1, 3, 44, 77, 98, 10, 13,36,72,128,888,666, 43 };
-		String[] stringArray1 = { "alma", "körte", "ananász","barack", "mangó" };
-		String[] stringArray2 = {"alma","ananász","eper","mandarin","narancs" };
-		String[] stringArray3 = {"ananász","alma","eper","mandarin","mangó"};
-		String normalString = "megszentségteleníthetetlenségeskedéseitekért";
+		String[] stringArray1 = { "alma", "kï¿½rte", "ananï¿½sz","barack", "mangï¿½" };
+		String[] stringArray2 = {"alma","ananï¿½sz","eper","mandarin","narancs" };
+		String[] stringArray3 = {"ananï¿½sz","alma","eper","mandarin","mangï¿½"};
+		String normalString = "megszentsï¿½gtelenï¿½thetetlensï¿½geskedï¿½seitekï¿½rt";
 		
 		showCommonFruit(Arrays.asList(stringArray1), Arrays.asList(stringArray2), Arrays.asList(stringArray3));
-		
+		//asdasdasdasd
 		hattalossz(Arrays.asList(testArray));
 		
 		reverseString(normalString);
